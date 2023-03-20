@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router();
+const users = ['ash', 'mo', 'janet']
 
 
 router.get("/users", (req,res) =>{
@@ -12,7 +13,7 @@ router.post("/users", (req, res)=>{
 })
 
 router.get("/users/:userid", (req, res)=>{
-    res.send(req.params.userid)
+    res.send(users[req.params.userid])
 })
 
 module.exports = router
