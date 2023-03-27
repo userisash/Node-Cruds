@@ -7,7 +7,7 @@ require('./config/dbConnect')
 const app = express()
 
 //middlewares
-
+app.use(express.json())
 app.use('/api/v1/user', UserRoute)
 app.use('/api/v1/account', AccountRoute)
 app.use('/api/v1/transactions', TransactionsRoute)
